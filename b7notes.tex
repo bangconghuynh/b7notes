@@ -1,0 +1,193 @@
+% !TeX program = lualatex
+% !TeX TXS-program:bibliography = txs:///biber
+
+%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Class
+\documentclass[%
+	11pt,%
+	oneside,%
+	DIV=15,%
+	BCOR=0mm,%
+	headinclude=true,%
+	footinclude=true,%
+	parskip=half,%
+	headsepline
+]{scrartcl}
+
+
+% Page layout
+\usepackage{setspace}
+
+\onehalfspacing
+
+\setlength{\parindent}{1.5em}
+
+
+% Maths support
+\usepackage{amsmath, amsthm, amssymb, mathrsfs, mathtools, gensymb, braket} %loading packages for further maths support
+
+\usepackage{mleftright} %loading package for ensuring correct spacing before brackets
+\mleftright
+
+
+% Typography
+\usepackage{csquotes}
+
+\usepackage[usenames, svgnames]{xcolor} %loading package for colour support
+
+
+% Diagrams and captions
+\usepackage{pgfplots} % pgfplots loads tikz automatically
+
+\usetikzlibrary{external}
+
+\tikzexternalize
+
+\newif\iftikzex
+\tikzextrue
+%\tikzexfalse
+
+\iftikzex
+\pgfplotsset{compat=1.16}
+
+\usetikzlibrary{calc, luamath, positioning, pgfplots.groupplots, decorations.pathreplacing}
+
+\pgfplotscreateplotcyclelist{coloronly}{%
+	{red},%
+	{blue},%
+	{black!60!green},%
+	{black!20!orange},%
+	{green!30!brown},%
+	{blue!40!red},%
+	{black!60!blue},%
+	{black!40!yellow},%
+	{red!50!pink},%
+	{green!70!blue},%
+}
+\fi
+
+\makeatletter
+\newcommand*{\useexternalfile}[1]{%
+	\iftikzex
+	\tikzsetnextfilename{tikzoutput/#1-output}%
+	\scalebox{1}{\input{\tikzexternal@filenameprefix#1.tikz}}
+	\else
+	\includegraphics[scale=1]{\tikzexternal@filenameprefix tikzoutput/#1-output.pdf}
+	\fi
+}
+\makeatother
+
+\usepackage{xifthen} %conditionals in plots
+
+\usepackage[%
+format=plain,%
+font={small,stretch=1.1},%
+labelfont=bf,%
+skip=5pt%
+]{caption} %bold pre-texts in captions
+
+
+% Chemistry
+\usepackage[version=4]{mhchem} %loading package for further chemistry typesetting support
+
+
+% Scientific typesetting
+\usepackage{siunitx, graphicx}
+
+
+% Lists
+\usepackage{enumitem}
+
+
+% Theorem
+\theoremstyle{plain} % insert bellow all blocks you want in italic
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+%\setcounter{secnumdepth}{3}
+
+
+% Micro-typography
+\usepackage[%
+	activate={true, nocompatibility},%
+	final,%
+	tracking=true,%
+	factor=1100,%
+	stretch=10,%
+	shrink=10%
+]{microtype}
+
+\SetTracking{encoding={*}, shape=sc}{40} % Reduce spacing between sc characters
+
+\microtypecontext{spacing=nonfrench}
+
+
+% Font & languages
+\usepackage[no-math]{fontspec}
+\defaultfontfeatures{%
+	Ligatures = TeX,%
+	Numbers = Lining}
+
+\usepackage{polyglossia} %loading package for language support; polyglossia requires fontspec, so load fontspec first
+\setmainlanguage[variant=uk]{english}
+
+\setmainfont{Alegreya}[%
+	Ligatures	= TeX
+]
+\setsansfont{Alegreya-Sans}
+
+\newcommand*\bmmax{2}
+\usepackage{bm}
+
+\DeclareMathSizes{8}{8}{5.5}{5}
+\addtokomafont{disposition}{\rmfamily} %change all heading fonts to roman
+\KOMAoptions{DIV=last}
+
+\usepackage[math-style=TeX]{unicode-math}
+\setmathfont{STIX2Math.otf}
+\setmathfont{Alegreya-Italic.otf}[Scale=MatchLowercase, ScaleAgain=0.99999, range = it/{latin, Latin, greek, Greek}]
+\setmathfont{Alegreya-Regular.otf}[Scale=MatchLowercase, ScaleAgain=0.99999, range = up/{latin, Latin, greek, Greek, num}]
+\setmathfont{Alegreya-BoldItalic.otf}[Scale=MatchLowercase,ScaleAgain=0.99999,range=bfit/{latin, Latin, greek, Greek}]
+\setmathfont{Alegreya-Bold.otf}[Scale=MatchLowercase,ScaleAgain=0.99999,range=bfup/{latin, Latin, greek, Greek, num}]
+
+
+% Bookmarking
+\usepackage[hypertexnames=false,hidelinks,hyperfootnotes=false]{hyperref} %loading package for hyperlinks in references and for creating pdf bookmarks automatically; hyperref must be loaded last
+\hypersetup{bookmarksnumbered=true,colorlinks=true,citecolor=blue!60!black,linkcolor=blue!60!black} % this is for screen version
+%\hypersetup{bookmarksnumbered=true,colorlinks=false} % this is for print version
+
+
+% Footnotes
+\usepackage[perpage]{footmisc}
+
+
+% Cross-referencing
+\usepackage[capitalise, noabbrev]{cleveref} %loading package for enhanced cross-referencing; cleveref must be loaded after hyperref and listings
+
+%% Main document %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	\vspace{1cm}
+	\noindent
+	\bgroup
+	\renewcommand\arraystretch{1.5} \begin{tabular*}{\linewidth}{>{\centering\arraybackslash}m{\linewidth}}
+		\hline
+		\textbf{\Large Notes for B7---Symmetry}\\[-6pt]
+		\textit{\large A summary of important and more subtle points}\\
+		\textcopyright\, February 2020, Bang C. Huynh (\href{mailto:cbh31@cam.ac.uk}{\texttt{cbh31[at]cam.ac.uk}})\\
+		\hline
+	\end{tabular*}
+	\egroup
+	
+	\setcounter{tocdepth}{2}
+	\tableofcontents
+	
+	
+	Some of the more mathematical issues in this course are rather hard to verbalise in supervisions.
+	I have therefore compiled this set of notes to go over these issues more carefully.
+	I hope that this will provide you with a more satisfactory and rigorous account of the group and representation theory encountered in this course.
+	The main purpose of these notes is to enhance your understanding and help you become more familiar and comfortable with the mathematical arguments and techniques involved in group and representation theory, thereby allowing you to develop a sensible appreciation for the use of symmetry in understanding the beauty of the quantum world.
+	
+	\clearpage
+\end{document} 
