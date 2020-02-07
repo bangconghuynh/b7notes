@@ -23,6 +23,12 @@
 \setlength{\parindent}{1.5em}
 
 
+% TOC
+\usepackage[toc]{multitoc}
+\renewcommand*{\multicolumntoc}{2}
+\setlength{\columnseprule}{0.5pt}
+
+
 % Maths support
 \usepackage{amsmath, amsthm, amssymb, mathrsfs, mathtools, gensymb, braket} %loading packages for further maths support
 
@@ -102,10 +108,10 @@ skip=5pt%
 % Theorem
 \theoremstyle{plain} % insert bellow all blocks you want in italic
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{proposition}{Proposition}[theorem]
 \theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
+\newtheorem{definition}{Definition}[section]
 %\setcounter{secnumdepth}{3}
 
 
@@ -190,4 +196,6 @@ skip=5pt%
 	The main purpose of these notes is to enhance your understanding and help you become more familiar and comfortable with the mathematical arguments and techniques involved in group and representation theory, thereby allowing you to develop a sensible appreciation for the use of symmetry in understanding the beauty of the quantum world.
 	
 	\clearpage
+	
+	\include{general/general}
 \end{document} 
