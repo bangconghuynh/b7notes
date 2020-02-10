@@ -4,7 +4,7 @@
 %% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Class
 \documentclass[%
-	11pt,%
+	12pt,%
 	oneside,%
 	DIV=15,%
 	BCOR=0mm,%
@@ -24,9 +24,10 @@
 
 
 % TOC
-\usepackage[toc]{multitoc}
-\renewcommand*{\multicolumntoc}{2}
-\setlength{\columnseprule}{0.5pt}
+\usepackage{multicol}
+\BeforeStartingTOC[toc]{\begin{multicols}{2}}
+\AfterStartingTOC[toc]{\end{multicols}}
+\setlength{\columnseprule}{.5pt}
 
 
 % Maths support
@@ -56,7 +57,7 @@
 \iftikzex
 \pgfplotsset{compat=1.16}
 
-\usetikzlibrary{calc, luamath, positioning, pgfplots.groupplots, decorations.pathreplacing}
+\usetikzlibrary{calc, luamath, positioning, decorations.pathreplacing}
 
 \pgfplotscreateplotcyclelist{coloronly}{%
 	{red},%
@@ -107,12 +108,21 @@ skip=5pt%
 
 % Theorem
 \theoremstyle{plain} % insert bellow all blocks you want in italic
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{corollary}{Corollary}[theorem]
-\newtheorem{proposition}{Proposition}[theorem]
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{corollary}{Corollary}[subsection]
+\newtheorem{proposition}{Proposition}[subsection]
+
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{example}{Example}[subsection]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 %\setcounter{secnumdepth}{3}
+
+
+% Operators
+\DeclareMathOperator{\im}{im}
 
 
 % Micro-typography
@@ -180,7 +190,7 @@ skip=5pt%
 	\renewcommand\arraystretch{1.5} \begin{tabular*}{\linewidth}{>{\centering\arraybackslash}m{\linewidth}}
 		\hline
 		\textbf{\Large Notes for B7---Symmetry}\\[-6pt]
-		\textit{\large A summary of important and more subtle points}\\
+		\textit{\large A pedantic summary of important points}\\
 		\textcopyright\, February 2020, Bang C. Huynh (\href{mailto:cbh31@cam.ac.uk}{\texttt{cbh31[at]cam.ac.uk}})\\
 		\hline
 	\end{tabular*}
@@ -190,10 +200,13 @@ skip=5pt%
 	\tableofcontents
 	
 	
-	Some of the more mathematical issues in this course are rather hard to verbalise in supervisions.
+	Some of the more mathematical issues in this course are rather hard to condense and verbalise in the supervisions.
 	I have therefore compiled this set of notes to go over these issues more carefully.
-	I hope that this will provide you with a more satisfactory and rigorous account of the group and representation theory encountered in this course.
-	The main purpose of these notes is to enhance your understanding and help you become more familiar and comfortable with the mathematical arguments and techniques involved in group and representation theory, thereby allowing you to develop a sensible appreciation for the use of symmetry in understanding the beauty of the quantum world.
+	I hope that this will provide a more satisfactory and rigorous account of the group and representation theory encountered in this course.
+	The main purpose of these notes is to enhance your understanding and help you become more familiar and comfortable with the mathematical arguments and techniques involved in group and representation theory.
+	Some of the concepts mentioned here will definitely not be required for the Tripos examination of this course, so please do not feel compelled to remember all of them.
+	A good read of these notes in conjunction with the main lecture handout and a thorough revision of the supervision questions will place you in a very good position to understand the key points of the course and the significance of symmetry in illuminating the quantum world.
+	
 	
 	\clearpage
 	

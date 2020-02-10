@@ -7,8 +7,303 @@
 
 	\subsection{Maps}
 	
-		\begin{definition}
+		Maps enable objects from different sets or collections to be associated with one another.
+		In our study of groups and their representations, we will very often have to relate elements of various different groups together.
+		A clear understanding of maps allows us to think about group relationships more logically.
+
+		\begin{definition}[Map]
 			Let $X$ and $Y$ be sets.
+			A \emph{map} $f: X \rightarrow Y$ is a rule that associates to each element $x \in X$ a unique element $f(x) \in Y$.
+			We can then write $f: x \mapsto f(x)$.
+			$X$ and $Y$ are called the \emph{domain} and the \emph{target} of the map $f$, respectively.
+		\end{definition}
+
+		\begin{example}\leavevmode
+			\begin{enumerate}[label=(\alph*)]
+				\item The map $f: \symbb{R} \rightarrow \symbb{C}$ defined by $f: x \mapsto x+ix$ sends each real number $x$ to a unique complex number $x+ix$.
+				\item The map $f: \symbb{R} \times \symbb{R} \rightarrow \symbb{C}$ defined by $f: (x, y) \mapsto x+iy$ sends each ordered pair of real numbers $(x, y)$ to a unique complex number $x+iy$.
+			\end{enumerate}
+		\end{example}
+
+		\begin{definition}[Injective map]
+			A map $f: X \rightarrow Y$ is \emph{injective} if it sends unique elements of $X$ to unique elements of $Y$.
+			This means that, for all $x, x' \in X$, $x \neq x' \implies f(x) \neq f(x')$, or equivalently, $f(x) = f(x') \implies x = x'$.
+		\end{definition}
+
+		\begin{definition}[Surjective map]
+			\label{def:surjective}
+			A map $f: X \rightarrow Y$ is \emph{surjective} if, for each $y \in Y$, there is some $x \in X$ such that $f(x) = y$.
+		\end{definition}
+
+		\begin{example}\leavevmode
+			\label{exp:surjective}
+			\begin{enumerate}[label=(\alph*)]
+				\item The map $f: \symbb{R} \rightarrow \symbb{C}$ with $x \mapsto x+ix$ is injective because $x+ix = x'+ix' \implies x = x'$.
+				However, it is not surjective because there is no $x \in \symbb{R}$ that gets mapped to $(1+2i) \in \symbb{C}$.
+				\item \label{exp:xtox2} The map $f: \symbb{R} \rightarrow \symbb{R^+_0}$ with $x \mapsto x^2$ is not injective because $-2 \neq 2$ but $(-2)^2 = 2^2 = 4$.
+				However, it is surjective because every non-negative real number $y \in \symbb{R^+_0}$ must be the square of some real number.
+			\end{enumerate}
+		\end{example}
+	
+		\begin{definition}[Bijective map]
+			A map $f: X \rightarrow Y$ is \emph{bijective} if it is both surjective and injective, \textit{i.e.}, $f$ sends every $x \in X$ to one and only one $y \in Y$, and every $y \in Y$ has exactly one $x \in X$ that gets sent to it.
 		\end{definition}
 	
+		\begin{example}
+			The map $f: \symbb{R} \rightarrow \symbb{R}$ with $x \mapsto 5x+2$ is bijective.
+		\end{example}
+	
+		\begin{definition}[Image]
+			\label{def:image}
+			Consider a map $f: X \rightarrow Y$.
+			The set $\{y \in Y : y = f(x)\ \textrm{for all}\ x \in X\}$ is a subset of $Y$ called the \emph{image} of $f$.
+			We denote this set $\im f$ (the green area in \cref{fig:maps}).
+			
+			Combining this \namecref{def:image} with \cref{def:surjective}, we see that $f$ is surjective if and only if $\im f = Y$.
+			
+			\begin{figure}[h!]
+				\centering
+				\useexternalfile{maps}
+				\caption{Image of the map $f: X \rightarrow Y$.}
+				\label{fig:maps}
+			\end{figure}
+		\end{definition}
 		
+		\begin{example}
+			The image of the map $f: \symbb{R} \rightarrow \symbb{R}$ with $x \mapsto x^2$ is $\im f = \symbb{R}^+_0$.
+			Clearly $\symbb{R}^+_0 \subset \symbb{R}$ and $f$ is not surjective.
+			But if we restrict the target of $f$ to $\symbb{R}^+_0$, then, as in \cref{exp:surjective}\labelcref{exp:xtox2}, $f$ is surjective.
+		\end{example}
+
+
+	\subsection{Groups}
+	
+		You should be very familiar with all of the following definitions.
+		However, they are included here, together with a few interesting examples, for completeness.
+		
+		\begin{definition}[Binary operation]
+			A \emph{binary operation} on a set $X$ is a map $\ \star: X \times X \rightarrow X$ that combines two elements in $X$ to give another element in $X$.
+		\end{definition}
+
+		\begin{definition}[Group]
+			A \emph{group} is a triple $(G, \star, e)$ of a set $G$, a binary operation $\star$ on $G$, and an element $e \in G$ such that
+			\begin{enumerate}[label=(\roman*)]
+				\item (closure) for all $a, b \in G$, $a \star b \in G$;
+				\item (associativity) for all $a, b, c \in G$, $(a \star b) \star c = a \star (b \star c)$;
+				\item (identity) for all $a \in G$, $a \star e = e \star a = a$;
+				\item (inverse) for all $a \in G$, there exists some $b \in G$ such that $a \star b = b \star a = e$.
+			\end{enumerate}
+		\end{definition}
+	
+		\begin{remark}
+			We will write $G$ to denote the group $(G, \star, e)$ whenever the binary operation $\star$ and the identity element $e$ is clear from context.
+		\end{remark}
+
+		\begin{definition}[Abelian group]
+			A group $(G, \star, e)$ is called \emph{abelian} if $a \star b = b \star a$ for all $a, b \in G$.
+		\end{definition}
+	
+		\begin{example}
+			The point groups $\symcal{C}_{2v}, \symcal{D}_{2h}$, and all cyclic groups (\textit{e.g.}, $\symcal{C}_{3}$) are some notable abelian groups.
+		\end{example}
+	
+		\begin{definition}[Group presentation]
+			A \emph{presentation} of a group $(G, \star, e)$, denoted by $\braket{S \mid R}$, consists of a set $S$ of \emph{generators} and a set $R$ of \emph{relations} amongst these generators.
+			Every element in $G$ can be written as a product of powers of some of these generators, with respect to the binary operation $\star$.
+		\end{definition}
+	
+		\begin{example}\leavevmode
+			\begin{enumerate}[label=(\alph*)]
+				\item The cyclic group $\symcal{C}_{n}$ has presentation $\braket{r \mid r^n = e}$.
+				In point-group symmetry, we identify $r$ with an $n$-fold rotation about some axis $C_n$.
+				\item The dihedral groups $\symcal{D}_{nh}$ has presentation $\braket{r, s, t \mid r^n = s^2 = t^2 = e}$.
+				In point-group symmetry, we identify $r$ with an $n$-fold rotation about some axis $C_n$, $s$ a two-fold rotation about an axis $C_2 \perp C_n$, and $t$ a reflection in a plane $\sigma_h \perp C_n$.
+			\end{enumerate}
+		\end{example}
+	
+		\begin{definition}[Group finiteness and order]
+			A group $(G, \star, e)$ is called \emph{finite} if it has a finite number of elements.
+			Otherwise, it is called \emph{infinite}.
+			We write $|G|$ (or commonly $h$ in Physics and Chemistry) for the number of elements of $G$ and call this the \emph{order} of the group.
+		\end{definition}
+	
+		\begin{example}\leavevmode
+			\begin{enumerate}[label=(\alph*)]
+				\item The cyclic group $\symcal{C}_{n} = \left(\braket{r \mid r^n = e}, \star, e\right)$ has order $n$ and is finite if $h$ is finite.
+				\item There is, up to isomorphism (see \cref{def:isomorphism}), only one unique group of order 3, namely the cyclic group $\symcal{C}_{3}$.
+				\item There are, up to isomorphism, only two groups of order 4, namely the cyclic group $\symcal{C}_{4}$ and Klein four-group.
+				Klein four-group is isomorphic to the more familiar point groups $\symcal{C}_{2v}$, $\symcal{C}_{2h}$, and $\symcal{D}_{2}$.
+				\item $\symcal{C}_{\infty v}$ and $\symcal{D}_{\infty h}$ are two infinite axial point groups most commonly encountered in Chemistry.
+				\item The group of all rotations in three dimensions, denoted $\symup{SO}(3)$, is an infinite group.
+				The group of all reflections and rotations in three dimensions, denoted $\symup{O}(3)$, is also an infinite group.
+			\end{enumerate}
+		\end{example}
+
+
+	\subsection{Group Homomorphisms}
+
+		Group homomorphisms are structure-preserving maps that relate elements from different groups to each other.
+		These play a central role in the study of group and representation theory.
+		
+		\begin{definition}[Group homomorphism]
+			Let $(G, \star_G, e_G)$ and $(H, \star_H, e_H)$ be groups.
+			A map $\varphi: G \rightarrow H$ is called a \emph{group homomorphism} if, for all $a, b \in G$,
+				\begin{equation*}
+					\varphi(a \star_G b) = \varphi(a) \star_H \varphi(b).
+				\end{equation*}
+		\end{definition}
+	
+		\begin{remark}
+			$\varphi$ is essentially a map sending elements in one group, say, $G$, to elements in another group, say, $H$.
+			This map is, however, slightly more special because it preserves the structure of the domain group.
+			In particular,
+			\begin{enumerate}[label=(\roman*)]
+				\item it preserves closure: for all $a, b \in G$,
+					\begin{equation*}
+						\varphi(a) \star_H \varphi(b) = \varphi(a \star_G b) \in \im \varphi\ \textrm{because}\ a \star_G b \in G,
+					\end{equation*}
+					\textit{i.e.}, the product $\varphi(a) \star_H \varphi(b)$ stays in the image of the map $\varphi$;
+				\item it preserves associativity: for all $a, b, c \in G$,
+					\begin{align*}
+						[\varphi(a) \star_H \varphi(b)] \star_H \varphi(c) %
+						&= [\varphi(a \star_G b)] \star_H \varphi(c)\\
+						&= \varphi[(a \star_G b) \star_G c]\\
+						&= \varphi[a \star_G (b \star_G c)]\\
+						&= \varphi(a) \star_H [\varphi(b \star_G c)]\\
+						&= \varphi(a) \star_H [\varphi(b) \star_H \varphi(c)];
+					\end{align*}
+				\item it maps the identity in $G$ to the identity in $H$: for all $a \in G$,
+					\begin{equation*}
+						\varphi(a) = \varphi(e_G \star_G a) = \varphi(e_G) \star_H \varphi(a) %
+						\implies \varphi(e_G) = e_H;
+					\end{equation*}
+				\item it maps inverse to inverse: for all $a \in G$,
+					\begin{equation*}
+						e_H = \varphi(e_G) = \varphi(a \star_G a^{-1}) = \varphi(a) \star_H \varphi(a^{-1}) %
+						\implies \varphi(a^{-1}) = \varphi(a)^{-1}.
+					\end{equation*}
+			\end{enumerate}
+		\end{remark}
+	
+		\begin{example}\leavevmode
+			\label{exp:homomorphism}
+			\begin{enumerate}[label=(\alph*)]
+				\item The map $\varphi: G \rightarrow H$ defined by $\varphi: g \mapsto e_H$ is a group homomorphism.
+				It is, however, not injective if $|G| > 1$ because different elements in $G$ get mapped to the same element $e_H$ in $H$.
+				\item \label{exp:homomorphism.exp} Let $G = (\symbb{R}, +, 0)$ be the additive group of real numbers and $H = (\symbb{R}^+, \times, 1)$ the multiplicative group of positive real numbers.
+				The map $\varphi: G \rightarrow H$ defined by $\varphi: g \mapsto \exp(g)$ is a group homomorphism.
+			\end{enumerate}
+		\end{example}
+	
+		\begin{definition}[Group isomorphism]
+			\label{def:isomorphism}
+			Let $\varphi: G \rightarrow H$ be a group homomorphism.
+			If $\varphi$ is bijective, it is called a \emph{group isomorphism}.
+			If there exists a group isomorphism between $G$ and $H$, then $G$ and $H$ are said to be \emph{isomorphic} and we write $G \cong H$.
+		\end{definition}
+	
+		\begin{example}\leavevmode
+			\begin{enumerate}[label=(\alph*)]
+				\item The map $\varphi$ in \cref{exp:homomorphism}\labelcref{exp:homomorphism.exp} is bijective (why?) and is therefore an isomorphism.
+				$(\symbb{R}, +, 0)$ and $(\symbb{R}^+, \times, 1)$ are therefore isomorphic.
+				\item Let $\symcal{C}_4 = \left(\braket{\hat{C}_4 \mid \hat{C}^4_4 = \hat{E}}, \cdot, \hat{E}\right)$ be the cyclic group of order 4 and $G = \left(\{1, i, -1, -i\}, \cdot, 1\right)$ the group generated by the imaginary unit $i$.
+				The group homomorphism $\varphi: G \rightarrow \symcal{C}_4$ given by
+					\begin{equation*}
+						\varphi: 1 \mapsto \hat{E}, \quad i \mapsto \hat{C}_4, \quad -1 \mapsto \hat{C}^2_4, \quad -i \mapsto \hat{C}^3_4
+					\end{equation*}
+				is a group isomorphism.
+				Therefore, $G$ and $\symcal{C}_4$ are isomorphic.
+				\item The point groups $\symcal{T}_d$ and $\symcal{O}$ are isomorphic.
+			\end{enumerate}
+		\end{example}
+	
+	
+	\subsection{Some Important Abstract Groups}
+	
+		We provide a quick survey of some important abstract groups to which many of the commonly encountered concrete groups are isomorphic, and quite a few of which have far-reaching implications in quantum mechanics.
+		The abstractness of these groups admittedly does make them quite hard to be understood at first, but having at least a notion of them helps us think about the zoo of finite and infinite groups more systematically.
+		
+		\subsubsection{Linear Groups}
+			\label{sec:lineargroups}
+			
+			In this \namecref{sec:lineargroups}, we write $\symbb{F}$ to denote a field that can be either $\symbb{C}$ or $\symbb{R}$.
+			
+			\begin{definition}[Vector space]
+				\label{def:vectorspace}
+				Let $V$ be an (additive) abelian group and $\symbb{F}$ a commutative field.
+				$V$ is called a \emph{vector space over $\symbb{F}$} if, for all elements $\symbfit{v}_1, \symbfit{v}' \in V$ and scalars $\lambda, \lambda' \in \symbb{F}$,
+					\begin{enumerate}[label=(\roman*)]
+						\item (distributivity) $\lambda(\symbfit{v}+\symbfit{v}') = \lambda\symbfit{v}+\lambda\symbfit{v}'$;
+						\item (distributivity) $(\lambda+\lambda')\symbfit{v} = \lambda\symbfit{v}+\lambda'\symbfit{v}$;
+						\item (associativity) $\lambda'(\lambda\symbfit{v}) = (\lambda'\lambda)\symbfit{v}$;
+						\item (unity) $1\symbfit{v} = \symbfit{v}$.
+					\end{enumerate}
+			\end{definition}
+		
+			\begin{remark}
+				It is clear from the above \namecref{def:vectorspace} that neither a basis nor a concept of distances and angles is needed for a vector space.
+			\end{remark}
+		
+			We often think about $V$ as the space of geometrical vectors in some dimensions, due mainly to its name, but $V$ can be a much more general space than that.
+			The following definitions of some concrete vector spaces should make this clear.
+			
+			\begin{definition}[Coordinate space]
+				For a positive integer $n$, the set of all $n$-tuples of elements of $\symbb{F}$, $\symbfit{v} = (x_1, x_2, \ldots, x_n)$,
+				forms an $n$-dimensional vector space over $\symbb{F}$ called a \emph{coordinate space} and denoted $\symbb{F}^n$.
+			\end{definition}
+			
+			\begin{definition}[Function space]
+				Let $X$ be a set.
+				The set of all maps $f: X \rightarrow \symbb{F}$ forms a vector space over $\symbb{F}$ called a \emph{function space} and denoted $\symbb{F}^X$.
+			\end{definition}
+		
+			\begin{example}\leavevmode
+				\begin{enumerate}[label=(\alph*)]
+					\item s
+					\item s
+				\end{enumerate}
+			\end{example}
+		
+			\begin{proposition}
+				Let $V$ be a vector space over a field $\symbb{F}$.
+				The set of all invertible linear maps $\theta: V \rightarrow V$ forms a group.
+			\end{proposition}
+		
+			\begin{proof}
+				This proof is left as an exercise to the reader.
+			\end{proof}
+		
+			\begin{definition}[General linear group]
+				\label{def:GL}
+				Let $V$ be a vector space over a field $\symbb{F}$.
+				The group of all invertible linear maps $\theta: V \rightarrow V$ is called the \emph{general linear group} of $V$ and denoted by $\symup{GL}(V)$.
+			\end{definition}
+			
+			\begin{remark}\leavevmode
+				\begin{enumerate}[label=(\alph*)]
+					\item The binary operation in $\symup{GL}(V)$ is the operation of function composition, $\circ$, where $(\theta_2 \circ \theta_1)(\symbfit{v}) = \theta_2\left[\theta_1(\symbfit{v})\right]$ for some $\symbfit{v} \in V$.
+					\item The identity of $\symup{GL}(V)$ is the identity map $\symup{id}: V \rightarrow V$ defined as $\symup{id}: \symbfit{v} \mapsto \symbfit{v}$ which maps each $\symbfit{v} \in V$ to itself.
+				\end{enumerate}
+			\end{remark}
+		
+			\Cref{def:GL} does seem to make $\symup{GL}(V)$ look like a very abstract group.
+			It is indeed a fairly abstract group, and it might therefore be easier to think about $\symup{GL}(V)$ as the group of all invertible linear transformations acting on a particular vector space and mapping each vector to another vector.
+			Now, if $V$ is a vector space of finite dimensions, say $n$, over $\symbb{F}$, then we can choose a basis $\left\lbrace \symbf{e}_1, \symbf{e}_2, \ldots, \symbf{e}_n \right\rbrace$ for $V$ over $\symbb{F}$ such that each vector $\symbfit{v} \in V$ can be written as $\symbfit{v} = \sum_{i=1}^{n}\symbf{e}_i v_i$.
+			Then, every invertible linear transformation $\theta \in \symup{GL}(V)$ corresponds to an $n \times n$ invertible matrix $\symbfit{M}_{\theta} = [M_{ij}(\theta)]$ given by
+				\begin{equation*}
+					\theta(\symbf{e}_j) = \sum_{i=1}^{n} \symbf{e}_i M_{ij}(\theta).
+				\end{equation*}
+			This motivates the following.
+			
+			\begin{proposition}
+				The set of $n \times n$ invertible matrices over $\symbb{F}$, together with the binary operation of ordinary matrix multiplication, forms a group.
+				We denote this group $\symup{GL}_n(\symbb{F})$.
+			\end{proposition}
+		
+			\begin{proof}
+				This proof is left as a trivial exercise to the reader.
+			\end{proof}
+		
+			\begin{proposition}
+				The groups $\symup{GL}(V)$ and $\symup{GL}_n(\symbb{F})$ are isomorphic with the isomorphism given by $\theta \mapsto \symbfit{M}_{\theta}$ where $\symbfit{M}_{\theta}$ are $n \times n$ invertible matrices.
+			\end{proposition}

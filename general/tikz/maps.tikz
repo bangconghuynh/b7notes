@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+	\coordinate (Xcoord) at (-2, 0);
+	\coordinate (Ycoord) at (2, 0);
+	\coordinate (imfcoord) at ($(Ycoord) + (-0.3, -0.3)$);
+	\draw (Xcoord) ellipse (0.7cm and 1.2cm);
+	\node[inner sep=0pt](X) at ($(Xcoord) + (-0.12, 0.85)$) {$X$};
+	\draw (Ycoord) ellipse (1.5cm and 2cm);
+	\node[inner sep=0pt](Y) at ($(Ycoord) + (0.5, 1.5)$) {$Y$};
+	\draw[densely dashed, fill=green, fill opacity=0.3] (imfcoord) ellipse (0.8cm and 1.1cm);
+	\node[inner sep=0pt](imf) at ($(imfcoord) + (-0.06, 0.68)$) {$\im f$};
+	\node[circle, fill=black, inner sep=1.5pt](x) at ($(Xcoord) + (-0.2, 0.2)$) {};
+	\node[inner sep=0.5pt, anchor=north east, scale=0.9](xlabel) at ($(x) + (-0.1, -0.1)$) {$x$};
+	\node[circle, fill=black, inner sep=1.5pt](y) at ($(imfcoord) + (0.2, -0.2)$) {};
+	\node[inner sep=0.5pt, anchor = south west, scale=0.9](ylabel) at ($(y) + (0.1, 0.1)$) {$y$};
+	\draw[->] (x) .. controls (0, 0.3) .. (y) node [midway, above, sloped] {$f$};
+\end{tikzpicture}
