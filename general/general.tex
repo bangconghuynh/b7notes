@@ -226,6 +226,11 @@
 		\subsubsection{Linear Groups}
 			\label{sec:lineargroups}
 			
+			A lot of symmetry operations are actually linear maps acting on a certain vector space.
+			The set of all such maps turns out to form a very large group which we will soon defined to be the \emph{general linear group}.
+			We first introduce this group in its most abstract sense, and then relate it to more concrete groups of matrices via group isomorphisms.
+			Furthermore, this group plays a crucial role in the formalism of representation theory, and having at least a brief acknowledgement of its existence does help clarify quite a lot of ideas in the representations of groups which we will explore later on.
+			
 			In this \namecref{sec:lineargroups}, we write $\symbb{F}$ to denote a field that can be either $\symbb{C}$ or $\symbb{R}$.
 			
 			\begin{definition}[Vector space]
@@ -259,10 +264,14 @@
 		
 			\begin{example}\leavevmode
 				\begin{enumerate}[label=(\alph*)]
-					\item s
-					\item s
+					\item The set of all maps $f: \symbb{R} \rightarrow \symbb{R}$ given by $f: x \mapsto \sum_{i=0}^{n}a_i x^i$ for $a_i \in \symbb{R}$ is a function space of polynomials of degrees no more than $n$.
+					\item The set of all maps $f: \symbb{R} \times \symbb{R} \rightarrow \symbb{R}$ given by $f: (\theta, \phi) \mapsto \sum_{l=0}^{n} \sum_{m=-l}^{l} a_{l}^{m} Y_{l}^{m}(\theta, \phi)$ for $a_{l}^{m} \in \symbb{R}$ and $Y_{l}^{m}$ a spherical harmonic function of degree $l$ and order $m$ is a function space.
 				\end{enumerate}
 			\end{example}
+		
+			\begin{remark}
+				Whenever we think about the representation of a certain symmetry operation as a matrix, this matrix always has to be written with respect to a certain basis set which spans a particular function space.
+			\end{remark}
 		
 			\begin{proposition}
 				Let $V$ be a vector space over a field $\symbb{F}$.
@@ -287,7 +296,8 @@
 			\end{remark}
 		
 			\Cref{def:GL} does seem to make $\symup{GL}(V)$ look like a very abstract group.
-			It is indeed a fairly abstract group, and it might therefore be easier to think about $\symup{GL}(V)$ as the group of all invertible linear transformations acting on a particular vector space and mapping each vector to another vector.
+			It is indeed a very abstract group, and it might therefore be easier to think about $V$ as the space of geometric vectors that we are familiar with, and $\symup{GL}(V)$ as the group of all invertible linear transformations mapping each vector to another vector in $V$.
+			
 			Now, if $V$ is a vector space of finite dimensions, say $n$, over $\symbb{F}$, then we can choose a basis $\left\lbrace \symbf{e}_1, \symbf{e}_2, \ldots, \symbf{e}_n \right\rbrace$ for $V$ over $\symbb{F}$ such that each vector $\symbfit{v} \in V$ can be written as $\symbfit{v} = \sum_{i=1}^{n}\symbf{e}_i v_i$.
 			Then, every invertible linear transformation $\theta \in \symup{GL}(V)$ corresponds to an $n \times n$ invertible matrix $\symbfit{M}_{\theta} = [M_{ij}(\theta)]$ given by
 				\begin{equation*}
@@ -305,5 +315,5 @@
 			\end{proof}
 		
 			\begin{proposition}
-				The groups $\symup{GL}(V)$ and $\symup{GL}_n(\symbb{F})$ are isomorphic with the isomorphism given by $\theta \mapsto \symbfit{M}_{\theta}$ where $\symbfit{M}_{\theta}$ are $n \times n$ invertible matrices.
+				$\symup{GL}(V)$ is isomorphic to $\symup{GL}_n(\symbb{F})$ with the group isomorphism given by $\theta \mapsto \symbfit{M}_{\theta}$ where $\symbfit{M}_{\theta}$ are $n \times n$ invertible matrices.
 			\end{proposition}

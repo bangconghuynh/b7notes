@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (MiKTeX 2.9.7050 64-bit)  (format=lualatex 2019.6.12)  10 FEB 2020 00:30
+This is LuaTeX, Version 1.10.0 (MiKTeX 2.9.7050 64-bit)  (format=lualatex 2019.6.12)  11 FEB 2020 01:22
  system commands enabled.
 **b7notes.tex
 (./b7notes.tex
@@ -1261,12 +1261,12 @@ Lua module: polyglossia 2013/05/11 1.3 Polyglossia)
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/polyglossia/gloss-english.ldf"
 File: gloss-english.ldf polyglossia: module for english
 Module polyglossia Info: Language data for english
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            righthyphenmin	3
-(polyglossia)            synonyms	table: 000001DFF4F18710
-(polyglossia)            hyphenation	
-(polyglossia)            patterns	
 (polyglossia)            loader	hyphen.tex
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            hyphenation	
+(polyglossia)            righthyphenmin	3
+(polyglossia)            patterns	
+(polyglossia)            synonyms	table: 00000276183E4D40
 (polyglossia)            patterns:  on input line 6
 Module polyglossia Info: Language english was not yet loaded; created with id 4 
 on input line 6
@@ -2312,12 +2312,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package polyglossia Info: Option: english variant=british.
 Module polyglossia Info: Language data for ukenglish
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            righthyphenmin	3
-(polyglossia)            synonyms	table: 000001DFF2DB0CF0
-(polyglossia)            hyphenation	hyph-en-gb.hyp.txt
-(polyglossia)            patterns	hyph-en-gb.pat.txt
 (polyglossia)            loader	loadhyph-en-gb.tex
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            hyphenation	hyph-en-gb.hyp.txt
+(polyglossia)            righthyphenmin	3
+(polyglossia)            patterns	hyph-en-gb.pat.txt
+(polyglossia)            synonyms	table: 00000276183F4000
 (polyglossia)            patterns: hyph-en-gb.pat.txt on input line 186
 Module polyglossia Info: Language ukenglish was not yet loaded; created with id 
 8 on input line 186
@@ -2488,11 +2488,18 @@ LaTeX Font Info:    Font shape `TU/Alegreya-Bold.otf(0)/m/n' will be
 (Font)              scaled to size 7.84375pt on input line 67.
 LaTeX Font Info:    Font shape `TU/Alegreya-Bold.otf(0)/m/n' will be
 (Font)              scaled to size 5.88281pt on input line 67.
- [3<./general/tikz/tikzoutput/maps-output.pdf>] [4] [5] [6] [7] [8]) [9]
+ [3<./general/tikz/tikzoutput/maps-output.pdf>] [4] [5] [6] [7] [8]
+Overfull \hbox (9.33632pt too wide) in paragraph at lines 301--303
+[]\TU/Alegreya(0)/m/n/12 Now, if $\TU/Alegreya-Italic.otf(0)/m/n/12 V$ \TU/Aleg
+reya(0)/m/n/12 is a vec-tor space of fi-nite di-men-sions, say $\TU/Alegreya-It
+alic.otf(0)/m/n/12 n$\TU/Alegreya(0)/m/n/12 , over $\TU/STIX2Math.otf(1)/m/n/12
+ 𝔽$\TU/Alegreya(0)/m/n/12 , then we can choose a basis $[][]$
+ []
+
+) [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
-
-(./b7notes.aux
+ (./b7notes.aux
 Package cleveref Info: loaded `english' language definitions on input line 21.
  (./general/general.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 214.
@@ -2509,7 +2516,7 @@ Here is how much of LuaTeX's memory you used:
 , 19 attribute_list, 5 write nodes
    avail lists: 1:3,2:506,3:136,4:85,5:287,6:29,7:2353,8:46,9:179,10:15,11:109
  58479 multiletter control sequences out of 65536+200000
- 153 fonts using 48360351 bytes
+ 153 fonts using 48360271 bytes
  73i,9n,127p,9085b,2935s stack positions out of 5000i,500n,10000p,200000b,50000s
 <E:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/huerta/alegreya/alegreya-bold.
 otf><E:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/huerta/alegreya/alegreya-b
@@ -2522,7 +2529,7 @@ ublic/lm/lmmono12-regular.otf><E:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/
 huerta/alegreya/alegreya-regular.otf><E:/Program Files (x86)/MiKTeX 2.9/fonts/op
 entype/huerta/alegreya/alegreya-italic.otf><E:/Program Files (x86)/MiKTeX 2.9/fo
 nts/opentype/huerta/alegreya/alegreya-bold.otf>
-Output written on b7notes.pdf (9 pages, 100455 bytes).
+Output written on b7notes.pdf (9 pages, 102583 bytes).
 
 PDF statistics: 241 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 131072)
