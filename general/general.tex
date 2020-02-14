@@ -4,6 +4,8 @@
 	\label{sec:prelim}
 
 	We introduce several mathematical preliminaries in this \namecref{sec:prelim} to prepare for a more rigorous treatment in what will follow.
+	
+	In this \namecref{sec:prelim}, we write $\symbb{F}$ to denote a field of numbers that can be either $\symbb{C}$ or $\symbb{R}$.
 
 	\subsection{Maps}
 	
@@ -218,9 +220,82 @@
 		\end{example}
 	
 	
+	\subsection{Vector Space}
+	
+		For many groups, we often think about their elements as linear transformations acting on some particular set of functions.
+		To have a more rigorous understanding of this, we must digress momentarily from our discussion of groups and introduce the concept of a \emph{vector space}.
+		
+		\begin{definition}[Vector space]
+			\label{def:vectorspace}
+			Let $V$ be an (additive) abelian group and $\symbb{F}$ a commutative field.
+			$V$ is called a \emph{vector space over $\symbb{F}$} if, for all elements $\symbfit{v}_1, \symbfit{v}' \in V$ and scalars $\lambda, \lambda' \in \symbb{F}$,
+			\begin{enumerate}[label=(\roman*)]
+				\item (distributivity) $\lambda(\symbfit{v}+\symbfit{v}') = \lambda\symbfit{v}+\lambda\symbfit{v}'$;
+				\item (distributivity) $(\lambda+\lambda')\symbfit{v} = \lambda\symbfit{v}+\lambda'\symbfit{v}$;
+				\item (associativity) $\lambda'(\lambda\symbfit{v}) = (\lambda'\lambda)\symbfit{v}$;
+				\item (unity) $1\symbfit{v} = \symbfit{v}$.
+			\end{enumerate}
+		\end{definition}
+		
+		It is clear from the above \namecref{def:vectorspace} that neither a basis nor a concept of distances and angles is needed for a vector space.
+		Nevertheless, it is often helpful to specify a vector space using a \emph{basis}.
+		
+		\begin{definition}[Basis]
+			Let $V$ be a vector space over a field $\symbb{F}$.
+			A subset $B$ of $V$ is called a \emph{basis} of $V$ if $B$ satisfies the following conditions:
+			\begin{enumerate}[label=(\roman*)]
+				\item (linear independence) for every finite subset $\{\symbf{e}_i \mid i=1,2,\ldots,n\}$ of $B$ and every $a_1, a_2, \ldots, a_n \in \symbb{F}$, if $\sum_{i=1}^{n}\symbf{e}_i a_i = 0$ then it must follow that $a_i = 0$ for all $i=1,2,\ldots,n$;
+				\item (spanning) for every $\symbfit{v} \in V$, it is possible to choose $\symbf{e}_i \in B$ and $v_i \in \symbb{F}$ such that $\symbfit{v} = \sum_{i}\symbf{e}_i v_i$.
+			\end{enumerate}
+		\end{definition}
+		
+		\begin{remark}
+			We commonly say that $B$ spans $V$ or $V$ is spanned by $B$.
+			$B$ therefore provides a compact way of specifying $V$, and the number of elements of $B$ (the cardinality of $B$) is the dimension of $V$.
+		\end{remark}
+	
+		In many vector spaces we encounter, it is often necessary to define an additional structure called \emph{inner product} so that the concept of distances and angles can be formalised.
+		
+		\begin{definition}[Inner product]
+			Let $V$ be a vector space over a field $\symbb{F}$.
+			An \emph{inner product} on $V$ is a map $\braket{\cdot, \cdot}: V \times V \rightarrow \symbb{F}$ that associates each pair of vectors to a scalar quantity and satisfies the following properties:
+			\begin{enumerate}[label=(\roman*)]
+				\item (conjugate symmetry) for all $v_i, v_j \in V$, $\braket{\symbfit{v}_i, \symbfit{v}_j} = \braket{\symbfit{v}_j, \symbfit{v}_i}^*$;
+				\item (linearity in the first argument) for all $v_i, v_j \in V$ and $a \in \symbb{F}$, $\braket{a\symbfit{v}_i, \symbfit{v}_j} = a\braket{\symbfit{v}_i, \symbfit{v}_j}$;
+				\item (positive-definiteness) for all $v_i \in V$, $\braket{\symbfit{v}_i, \symbfit{v}_i} \ge 0$ and $\braket{\symbfit{v}_i, \symbfit{v}_i} \ge 0 \Leftrightarrow \symbfit{v}_i = \symbf{0}$.
+			\end{enumerate}
+		\end{definition}
+		
+		We often think about $V$ as the space of geometrical vectors in some dimensions, due mainly to its name, but $V$ can be a much more general space than that.
+		The following definitions of some concrete vector spaces should make this clear.
+		
+		\begin{definition}[Coordinate space]
+			For a positive integer $n$, the set of all $n$-tuples of elements of $\symbb{F}$, $\symbfit{v} = (x_1, x_2, \ldots, x_n)$,
+			forms an $n$-dimensional vector space over $\symbb{F}$ called a \emph{coordinate space} denoted by $\symbb{F}^n$.
+		\end{definition}
+		
+		\begin{definition}[Function space]
+			Let $X$ be a set.
+			The set of all maps $f: X \rightarrow \symbb{F}$ forms a vector space over $\symbb{F}$ called a \emph{function space} and denoted $\symbb{F}^X$.
+		\end{definition}
+		
+		\begin{example}\leavevmode
+			\begin{enumerate}[label=(\alph*)]
+				\item The set of all maps $f: \symbb{R} \rightarrow \symbb{R}$ given by $f: x \mapsto \sum_{i=0}^{n}x^i a_i$ for $a_i \in \symbb{R}$ is a function space of polynomials of degrees no more than $n$.
+				This space is spanned by the set of monomials $\{x^i \mid i=0,1,\ldots,n\}$.
+				\item The set of all maps $f: \symbb{R} \times \symbb{R} \rightarrow \symbb{C}$ given by $f: (\theta, \phi) \mapsto \sum_{l=0}^{n} \sum_{m=-l}^{l} Y_{l}^{m}(\theta, \phi)\ a_{l}^{m}$ for $a_{l}^{m} \in \symbb{R}$ and $Y_{l}^{m}$ a spherical harmonic function of degree $l$ and order $m$ is a function space.
+				This space is spanned by the set of spherical harmonics $\{Y_{l}^{m} \mid l=0,1,\ldots,n; \ m=-l,-l+1,\ldots,l\}$.
+			\end{enumerate}
+		\end{example}
+		
+		\begin{remark}
+			Whenever we think about the representation of a certain symmetry operation as a matrix, this matrix always has to be written with respect to a certain basis set which spans a particular function space.
+		\end{remark}
+
+
 	\subsection{Some Important Abstract Groups}
 	
-		We provide a quick survey of some important abstract groups to which many of the commonly encountered concrete groups are isomorphic, and quite a few of which have far-reaching implications in quantum mechanics.
+		We can now get back to our discussion of group theory where we will provide a quick survey of some important abstract groups to which many of the commonly encountered concrete groups are isomorphic, and quite a few of which have far-reaching implications in quantum mechanics.
 		The abstractness of these groups admittedly does make them quite hard to be understood at first, but having at least a notion of them helps us think about the zoo of finite and infinite groups more systematically.
 		
 		\subsubsection{Linear Groups}
@@ -231,48 +306,6 @@
 			We first introduce this group in its most abstract sense, and then relate it to more concrete groups of matrices via group isomorphisms.
 			Furthermore, this group plays a crucial role in the formalism of representation theory, and having at least a brief acknowledgement of its existence does help clarify quite a lot of ideas in the representations of groups which we will explore later on.
 			
-			In this \namecref{sec:lineargroups}, we write $\symbb{F}$ to denote a field that can be either $\symbb{C}$ or $\symbb{R}$.
-			
-			\begin{definition}[Vector space]
-				\label{def:vectorspace}
-				Let $V$ be an (additive) abelian group and $\symbb{F}$ a commutative field.
-				$V$ is called a \emph{vector space over $\symbb{F}$} if, for all elements $\symbfit{v}_1, \symbfit{v}' \in V$ and scalars $\lambda, \lambda' \in \symbb{F}$,
-					\begin{enumerate}[label=(\roman*)]
-						\item (distributivity) $\lambda(\symbfit{v}+\symbfit{v}') = \lambda\symbfit{v}+\lambda\symbfit{v}'$;
-						\item (distributivity) $(\lambda+\lambda')\symbfit{v} = \lambda\symbfit{v}+\lambda'\symbfit{v}$;
-						\item (associativity) $\lambda'(\lambda\symbfit{v}) = (\lambda'\lambda)\symbfit{v}$;
-						\item (unity) $1\symbfit{v} = \symbfit{v}$.
-					\end{enumerate}
-			\end{definition}
-		
-			\begin{remark}
-				It is clear from the above \namecref{def:vectorspace} that neither a basis nor a concept of distances and angles is needed for a vector space.
-			\end{remark}
-		
-			We often think about $V$ as the space of geometrical vectors in some dimensions, due mainly to its name, but $V$ can be a much more general space than that.
-			The following definitions of some concrete vector spaces should make this clear.
-			
-			\begin{definition}[Coordinate space]
-				For a positive integer $n$, the set of all $n$-tuples of elements of $\symbb{F}$, $\symbfit{v} = (x_1, x_2, \ldots, x_n)$,
-				forms an $n$-dimensional vector space over $\symbb{F}$ called a \emph{coordinate space} and denoted $\symbb{F}^n$.
-			\end{definition}
-			
-			\begin{definition}[Function space]
-				Let $X$ be a set.
-				The set of all maps $f: X \rightarrow \symbb{F}$ forms a vector space over $\symbb{F}$ called a \emph{function space} and denoted $\symbb{F}^X$.
-			\end{definition}
-		
-			\begin{example}\leavevmode
-				\begin{enumerate}[label=(\alph*)]
-					\item The set of all maps $f: \symbb{R} \rightarrow \symbb{R}$ given by $f: x \mapsto \sum_{i=0}^{n}a_i x^i$ for $a_i \in \symbb{R}$ is a function space of polynomials of degrees no more than $n$.
-					\item The set of all maps $f: \symbb{R} \times \symbb{R} \rightarrow \symbb{R}$ given by $f: (\theta, \phi) \mapsto \sum_{l=0}^{n} \sum_{m=-l}^{l} a_{l}^{m} Y_{l}^{m}(\theta, \phi)$ for $a_{l}^{m} \in \symbb{R}$ and $Y_{l}^{m}$ a spherical harmonic function of degree $l$ and order $m$ is a function space.
-				\end{enumerate}
-			\end{example}
-		
-			\begin{remark}
-				Whenever we think about the representation of a certain symmetry operation as a matrix, this matrix always has to be written with respect to a certain basis set which spans a particular function space.
-			\end{remark}
-		
 			\begin{proposition}
 				Let $V$ be a vector space over a field $\symbb{F}$.
 				The set of all invertible linear maps $\theta: V \rightarrow V$ forms a group.
@@ -298,7 +331,7 @@
 			\Cref{def:GL} does seem to make $\symup{GL}(V)$ look like a very abstract group.
 			It is indeed a very abstract group, and it might therefore be easier to think about $V$ as the space of geometric vectors that we are familiar with, and $\symup{GL}(V)$ as the group of all invertible linear transformations mapping each vector to another vector in $V$.
 			
-			Now, if $V$ is a vector space of finite dimensions, say $n$, over $\symbb{F}$, then we can choose a basis $\left\lbrace \symbf{e}_1, \symbf{e}_2, \ldots, \symbf{e}_n \right\rbrace$ for $V$ over $\symbb{F}$ such that each vector $\symbfit{v} \in V$ can be written as $\symbfit{v} = \sum_{i=1}^{n}\symbf{e}_i v_i$.
+			Now, if $V$ is a vector space of $n$ dimensions over $\symbb{F}$, then we can choose a basis $\left\lbrace \symbf{e}_1, \symbf{e}_2, \ldots, \symbf{e}_n \right\rbrace$ for $V$ over $\symbb{F}$.
 			Then, every invertible linear transformation $\theta \in \symup{GL}(V)$ corresponds to an $n \times n$ invertible matrix $\symbfit{M}_{\theta} = [M_{ij}(\theta)]$ given by
 				\begin{equation*}
 					\theta(\symbf{e}_j) = \sum_{i=1}^{n} \symbf{e}_i M_{ij}(\theta).
@@ -317,3 +350,17 @@
 			\begin{proposition}
 				$\symup{GL}(V)$ is isomorphic to $\symup{GL}_n(\symbb{F})$ with the group isomorphism given by $\theta \mapsto \symbfit{M}_{\theta}$ where $\symbfit{M}_{\theta}$ are $n \times n$ invertible matrices.
 			\end{proposition}
+		
+			\begin{proof}
+				This proof is left as another (slightly more involved) exercise to the reader.
+				In essence, we need to show that $\theta: \symup{GL}(V) \rightarrow \symup{GL}_n(\symbb{F})$ is a group homomorphism, and then that $\theta$ is bijective.
+			\end{proof}
+		
+			It is important to remember that $\symup{GL}(V)$ is defined as an abstract group of linear maps acting on some vector space, whereas $\symup{GL}_n(\symbb{F})$ is a concrete group of matrices.
+			However, the isomorphism between the two enables us to think about one via the other.
+			We will have a lot more to say about these groups when we introduce representation theory.
+
+			
+
+%		\subsubsection{Linear Groups}
+%			\label{sec:lineargroups}
