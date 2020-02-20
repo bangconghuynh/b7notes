@@ -254,7 +254,7 @@
 			$B$ therefore provides a compact way of specifying $V$, and the number of elements of $B$ (the cardinality of $B$) is the dimension of $V$.
 		\end{remark}
 	
-		In many vector spaces we encounter, it is often necessary to define an additional structure called \emph{inner product} so that the concept of distances and angles can be formalised.
+		In many vector spaces we encounter, it is often necessary to define an additional structure called \emph{inner product} so that the concept of distances and angles can be formalised, but it is important to recognise that not all vector spaces can be endowed with an inner product.
 		
 		\begin{definition}[Inner product]
 			Let $V$ be a vector space over a field $\symbb{F}$.
@@ -266,13 +266,34 @@
 			\end{enumerate}
 		\end{definition}
 		
-		We often think about $V$ as the space of geometrical vectors in some dimensions, due mainly to its name, but $V$ can be a much more general space than that.
-		The following definitions of some concrete vector spaces should make this clear.
+		We often think about a vector space $V$ as the space of geometrical vectors in some dimensions, due mainly to its name, but $V$ can be much more general than that.
+		The following definitions and examples of some concrete vector spaces should make this clear.
 		
 		\begin{definition}[Coordinate space]
-			For a positive integer $n$, the set of all $n$-tuples of elements of $\symbb{F}$, $\symbfit{v} = (x_1, x_2, \ldots, x_n)$,
+			For a positive integer $n$, the set of all $n$-tuples of elements of $\symbb{F}$, $\symbfit{v} = (v_1, v_2, \ldots, v_n)$,
 			forms an $n$-dimensional vector space over $\symbb{F}$ called a \emph{coordinate space} denoted by $\symbb{F}^n$.
 		\end{definition}
+	
+		\begin{remark}\leavevmode
+			\begin{enumerate}[label=(\roman*)]
+				\item A standard basis for $\symbb{F}^n$ is
+					\begin{align*}
+						\symbf{e}_1 &= (1, 0, \ldots, 0)\\
+						\symbf{e}_2 &= (0, 1, \ldots, 0)\\
+						\dots\\
+						\symbf{e}_n &= (0, 0, \ldots, 1).
+					\end{align*}
+					
+				\item Consider $\symbb{F} = \symbb{R}$.
+				The coordinate space $\symbb{R}^n$ by itself has no inner products associated to it.
+				However, if we define an inner product on this space such that, for any $\symbfit{u} = (u_1, u_2, \ldots, u_n)$ and $\symbfit{v} = (v_1, v_2, \ldots, v_n)$,
+					\begin{equation*}
+						\braket{\symbfit{u}, \symbfit{v}} = \sum_{i=1}^{n} u_i v_i,
+					\end{equation*}
+				then $\symbb{R}^n$ becomes a \emph{Euclidean space}.
+				The inner product $\braket{\symbfit{u}, \symbfit{v}}$ as defined above is called the \emph{dot product} of $\symbfit{u}$ and $\symbfit{v}$.
+			\end{enumerate}
+		\end{remark}
 		
 		\begin{definition}[Function space]
 			Let $X$ be a set.
@@ -283,14 +304,15 @@
 			\begin{enumerate}[label=(\alph*)]
 				\item The set of all maps $f: \symbb{R} \rightarrow \symbb{R}$ given by $f: x \mapsto \sum_{i=0}^{n}x^i a_i$ for $a_i \in \symbb{R}$ is a function space of polynomials of degrees no more than $n$.
 				This space is spanned by the set of monomials $\{x^i \mid i=0,1,\ldots,n\}$.
+				One possible inner product in this space is $\braket{f, g} = \int_{0}^{1}f(x)g(x) \D x$.
 				\item The set of all maps $f: \symbb{R} \times \symbb{R} \rightarrow \symbb{C}$ given by $f: (\theta, \phi) \mapsto \sum_{l=0}^{n} \sum_{m=-l}^{l} Y_{l}^{m}(\theta, \phi)\ a_{l}^{m}$ for $a_{l}^{m} \in \symbb{R}$ and $Y_{l}^{m}$ a spherical harmonic function of degree $l$ and order $m$ is a function space.
 				This space is spanned by the set of spherical harmonics $\{Y_{l}^{m} \mid l=0,1,\ldots,n; \ m=-l,-l+1,\ldots,l\}$.
+				One possible inner product in this space is $\braket{f, g} = \int_{\phi=0}^{2\pi} \int_{\theta=0}^{\pi} f^*(\theta, \phi)g(\theta, \phi) \sin\theta \D\theta\D\phi$.
 			\end{enumerate}
 		\end{example}
-		
-		\begin{remark}
-			Whenever we think about the representation of a certain symmetry operation as a matrix, this matrix always has to be written with respect to a certain basis set which spans a particular function space.
-		\end{remark}
+
+		In anticipation of what will be explained in {\color{red} on representation theory}, whenever we think about the representation of a certain symmetry operation as a matrix, this matrix always has to be written with respect to a certain basis spanning a particular vector space.
+		A basis is therefore crucial in the specification of any representation.
 
 
 	\subsection{Some Important Abstract Groups}

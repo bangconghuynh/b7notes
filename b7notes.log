@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (MiKTeX 2.9.7050 64-bit)  (format=lualatex 2019.6.12)  14 FEB 2020 01:36
+This is LuaTeX, Version 1.10.0 (MiKTeX 2.9.7050 64-bit)  (format=lualatex 2019.6.12)  20 FEB 2020 01:51
  system commands enabled.
 **b7notes.tex
 (./b7notes.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.701 seconds
+luaotfload | main : initialization completed in 0.740 seconds
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/koma-script/scrartcl.cls"
 Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/koma-script/scrkbase.sty"
@@ -1261,12 +1261,12 @@ Lua module: polyglossia 2013/05/11 1.3 Polyglossia)
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/polyglossia/gloss-english.ldf"
 File: gloss-english.ldf polyglossia: module for english
 Module polyglossia Info: Language data for english
-(polyglossia)            loader	hyphen.tex
-(polyglossia)            hyphenation	
-(polyglossia)            patterns	
-(polyglossia)            synonyms	table: 000001F78FB2B630
 (polyglossia)            righthyphenmin	3
 (polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	hyphen.tex
+(polyglossia)            hyphenation	
+(polyglossia)            synonyms	table: 0000017D2F402A80
+(polyglossia)            patterns	
 (polyglossia)            patterns:  on input line 6
 Module polyglossia Info: Language english was not yet loaded; created with id 4 
 on input line 6
@@ -1309,7 +1309,7 @@ lig;+smcp;"
 (fontspec)             <->"Alegreya/BI:mode=node;script=latn;language=DFLT;+lnum
 ;+tlig;+smcp;"
 
-LaTeX Info: Redefining \rmfamily on input line 154.
+LaTeX Info: Redefining \rmfamily on input line 155.
 
 Package fontspec Info: Font family 'Alegreya-Sans(0)' created for font
 (fontspec)             'Alegreya-Sans' with options [Ligatures = TeX,Numbers =
@@ -1343,7 +1343,7 @@ lnum;+tlig;+smcp;"
 (fontspec)             <->"Alegreya-Sans/BI:mode=node;script=latn;language=DFLT;
 +lnum;+tlig;+smcp;"
 
-LaTeX Info: Redefining \sffamily on input line 156.
+LaTeX Info: Redefining \sffamily on input line 157.
 
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/tools/bm.sty"
 Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
@@ -1376,7 +1376,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 62.9806pt
 (typearea)              \baselineskip   = 17.99446pt
-(typearea)              on input line 162.
+(typearea)              on input line 163.
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/unicode-math/unicode-math.sty"
 Package: unicode-math 2019/03/04 v0.8o Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -1528,15 +1528,15 @@ ssty=0;"<-7.5>"[STIX2Math.otf]:mode=base;script=math;language=DFLT;+tlig;+ssty=1
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 166.
+(Font)              `operators' in the math version `normal' on input line 167.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/STIX2Math.otf(1)/m/n on input line 16
-6.
+7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 166.
+(Font)              `operators' in the math version `bold' on input line 167.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/STIX2Math.otf(1)/bx/n on input line 
-166.
+167.
 
 Package fontspec Info: STIX2Math scale = 1.0001.
 
@@ -1623,15 +1623,15 @@ th;language=DFLT;+tlig;+ssty=1;"
 (fontspec)             21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 166.
+(Font)              `symbols' in the math version `normal' on input line 167.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/STIX2Math.otf(2)/m/n on input line 1
-66.
+67.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 166.
+(Font)              `symbols' in the math version `bold' on input line 167.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/STIX2Math.otf(2)/bx/n on input line 
-166.
+167.
 
 Package fontspec Info: STIX2Math scale = 0.9999.
 
@@ -1707,38 +1707,38 @@ th;language=DFLT;+tlig;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 16
-6.
+7.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/STIX2Math.otf(3)/m/n on input line 1
-66.
+67.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 166.
+(Font)              `largesymbols' in the math version `bold' on input line 167.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/STIX2Math.otf(3)/bx/n on input line 
-166.
+167.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 166.
+(Font)              scaled to size 12.00128pt on input line 167.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 8.40088pt on input line 166.
+(Font)              scaled to size 8.40088pt on input line 167.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 6.60071pt on input line 166.
+(Font)              scaled to size 6.60071pt on input line 167.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 166.
+(Font)              scaled to size 11.99872pt on input line 167.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 8.3991pt on input line 166.
+(Font)              scaled to size 8.3991pt on input line 167.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 6.59929pt on input line 166.
-LaTeX Font Info:    Try loading font information for U+msa on input line 166.
+(Font)              scaled to size 6.59929pt on input line 167.
+LaTeX Font Info:    Try loading font information for U+msa on input line 167.
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 166.
+LaTeX Font Info:    Try loading font information for U+msb on input line 167.
 
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 166.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 167.
 
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/jknappen/ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1812,18 +1812,18 @@ e=base;script=latn;language=DFLT;+tlig;+lnum;"<-7.5>s*[0.99999]"[Alegreya-Italic
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/Alegreya-Italic.otf(0)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 166.
+(Font)              scaled to size 11.99982pt on input line 167.
 \sym__um_fam1=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/Alegreya-Italic.otf(0)/m/n --> TU/Alegreya-Italic.otf
-(0)/m/n on input line 166.
+(0)/m/n on input line 167.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/Alegreya-Italic.otf(0)/m/n --> TU/Alegreya-Italic.otf
-(0)/bx/n on input line 166.
+(0)/bx/n on input line 167.
 LaTeX Font Info:    Font shape `TU/Alegreya-Italic.otf(0)/m/n' will be
-(Font)              scaled to size 8.39986pt on input line 166.
+(Font)              scaled to size 8.39986pt on input line 167.
 LaTeX Font Info:    Font shape `TU/Alegreya-Italic.otf(0)/m/n' will be
-(Font)              scaled to size 6.5999pt on input line 166.
+(Font)              scaled to size 6.5999pt on input line 167.
 luaotfload | aux : font no 29 (nil) defines no feature for script math
 luaotfload | aux : no font with id 29
 
@@ -1893,18 +1893,18 @@ lar.otf]:mode=base;script=latn;language=DFLT;+tlig;+lnum;"
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/Alegreya-Regular.otf(0)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 167.
+(Font)              scaled to size 11.99982pt on input line 168.
 \sym__um_fam2=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
 (Font)                  TU/Alegreya-Regular.otf(0)/m/n --> TU/Alegreya-Regular.o
-tf(0)/m/n on input line 167.
+tf(0)/m/n on input line 168.
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
 (Font)                  TU/Alegreya-Regular.otf(0)/m/n --> TU/Alegreya-Regular.o
-tf(0)/bx/n on input line 167.
+tf(0)/bx/n on input line 168.
 LaTeX Font Info:    Font shape `TU/Alegreya-Regular.otf(0)/m/n' will be
-(Font)              scaled to size 8.39986pt on input line 167.
+(Font)              scaled to size 8.39986pt on input line 168.
 LaTeX Font Info:    Font shape `TU/Alegreya-Regular.otf(0)/m/n' will be
-(Font)              scaled to size 6.5999pt on input line 167.
+(Font)              scaled to size 6.5999pt on input line 168.
 luaotfload | aux : font no 36 (nil) defines no feature for script math
 luaotfload | aux : no font with id 36
 
@@ -1975,18 +1975,18 @@ e=DFLT;+tlig;+lnum;"
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/Alegreya-BoldItalic.otf(0)/m/n' will be
-(Font)              scaled to size 11.76563pt on input line 168.
+(Font)              scaled to size 11.76563pt on input line 169.
 \sym__um_fam3=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `normal'
 (Font)                  TU/Alegreya-BoldItalic.otf(0)/m/n --> TU/Alegreya-BoldIt
-alic.otf(0)/m/n on input line 168.
+alic.otf(0)/m/n on input line 169.
 LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `bold'
 (Font)                  TU/Alegreya-BoldItalic.otf(0)/m/n --> TU/Alegreya-BoldIt
-alic.otf(0)/bx/n on input line 168.
+alic.otf(0)/bx/n on input line 169.
 LaTeX Font Info:    Font shape `TU/Alegreya-BoldItalic.otf(0)/m/n' will be
-(Font)              scaled to size 8.23593pt on input line 168.
+(Font)              scaled to size 8.23593pt on input line 169.
 LaTeX Font Info:    Font shape `TU/Alegreya-BoldItalic.otf(0)/m/n' will be
-(Font)              scaled to size 6.47108pt on input line 168.
+(Font)              scaled to size 6.47108pt on input line 169.
 luaotfload | aux : font no 34 (nil) defines no feature for script math
 luaotfload | aux : no font with id 34
 
@@ -2057,18 +2057,18 @@ reya-Bold.otf]:mode=base;script=latn;language=DFLT;+tlig;+lnum;"<-7.5>s*[0.98046
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/Alegreya-Bold.otf(0)/m/n' will be
-(Font)              scaled to size 11.76563pt on input line 169.
+(Font)              scaled to size 11.76563pt on input line 170.
 \sym__um_fam4=\mathgroup12
 LaTeX Font Info:    Overwriting symbol font `__um_fam4' in version `normal'
 (Font)                  TU/Alegreya-Bold.otf(0)/m/n --> TU/Alegreya-Bold.otf(0)/
-m/n on input line 169.
+m/n on input line 170.
 LaTeX Font Info:    Overwriting symbol font `__um_fam4' in version `bold'
 (Font)                  TU/Alegreya-Bold.otf(0)/m/n --> TU/Alegreya-Bold.otf(0)/
-bx/n on input line 169.
+bx/n on input line 170.
 LaTeX Font Info:    Font shape `TU/Alegreya-Bold.otf(0)/m/n' will be
-(Font)              scaled to size 8.23593pt on input line 169.
+(Font)              scaled to size 8.23593pt on input line 170.
 LaTeX Font Info:    Font shape `TU/Alegreya-Bold.otf(0)/m/n' will be
-(Font)              scaled to size 6.47108pt on input line 169.
+(Font)              scaled to size 6.47108pt on input line 170.
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty"
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
@@ -2171,8 +2171,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip93
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 174.
-Package hyperref Info: Option `colorlinks' set `true' on input line 174.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 175.
+Package hyperref Info: Option `colorlinks' set `true' on input line 175.
 
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/footmisc/footmisc.sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
@@ -2219,33 +2219,33 @@ Module polyglossia Info: Language english already loaded; id is 4 on input line
  (./general/general.aux))
 \openout1 = b7notes.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Info: Redefining \celsius on input line 186.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 186.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Info: Redefining \celsius on input line 187.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 187.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 186.
-Package gensymb Info: Using \Omega for \ohm on input line 186.
+LaTeX Info: Redefining \ohm on input line 187.
+Package gensymb Info: Using \Omega for \ohm on input line 187.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -2283,7 +2283,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `fontspec' on line 186.
+Package chemgreek Info: Activating mapping `fontspec' on line 187.
 
 
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/translator/translator-basic-dicti
@@ -2294,7 +2294,7 @@ Dictionary: translator-basic-dictionary, Language: English
 "
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Info: Redefining \microtypecontext on input line 186.
+LaTeX Info: Redefining \microtypecontext on input line 187.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
@@ -2312,34 +2312,34 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package polyglossia Info: Option: english variant=british.
 Module polyglossia Info: Language data for ukenglish
-(polyglossia)            loader	loadhyph-en-gb.tex
-(polyglossia)            hyphenation	hyph-en-gb.hyp.txt
-(polyglossia)            patterns	hyph-en-gb.pat.txt
-(polyglossia)            synonyms	table: 000001F78FB2D830
 (polyglossia)            righthyphenmin	3
 (polyglossia)            lefthyphenmin	2
-(polyglossia)            patterns: hyph-en-gb.pat.txt on input line 186
+(polyglossia)            loader	loadhyph-en-gb.tex
+(polyglossia)            hyphenation	hyph-en-gb.hyp.txt
+(polyglossia)            synonyms	table: 0000017D2F405940
+(polyglossia)            patterns	hyph-en-gb.pat.txt
+(polyglossia)            patterns: hyph-en-gb.pat.txt on input line 187
 Module polyglossia Info: Language ukenglish was not yet loaded; created with id 
-8 on input line 186
+8 on input line 187
 Module polyglossia Info: Language ukenglish already loaded; id is 8 on input lin
-e 186
+e 187
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  TU/STIX2Math.otf(1)/m/n --> TU/Alegreya(0)/m/n on input 
-line 186.
+line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Alegreya(0)/m/it on input line 186.
+(Font)                  OT1/cmr/m/it --> TU/Alegreya(0)/m/it on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Alegreya(0)/bx/n on input line 186.
+(Font)                  OT1/cmr/bx/n --> TU/Alegreya(0)/bx/n on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/Alegreya-Sans(0)/m/n on input line 1
-86.
+87.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/Alegreya-Sans(0)/bx/n on input line
- 186.
+ 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 186.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 187.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 186.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 187.
 
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
@@ -2349,7 +2349,7 @@ Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                original `unicode-math' definition.
 
 \AtBeginShipoutBox=\box99
-Package hyperref Info: Link coloring ON on input line 186.
+Package hyperref Info: Link coloring ON on input line 187.
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/hyperref/nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -2358,9 +2358,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count369
 )
-LaTeX Info: Redefining \ref on input line 186.
-LaTeX Info: Redefining \pageref on input line 186.
-LaTeX Info: Redefining \nameref on input line 186.
+LaTeX Info: Redefining \ref on input line 187.
+LaTeX Info: Redefining \pageref on input line 187.
+LaTeX Info: Redefining \nameref on input line 187.
 
 (./b7notes.out) (./b7notes.out)
 \@outlinefile=\write4
@@ -2372,7 +2372,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message with `\usepackage{bookmark}'
-(scrartcl)           before \begin{document} on input line 186.
+(scrartcl)           before \begin{document} on input line 187.
 
 ("E:/Program Files (x86)/MiKTeX 2.9/tex/latex/oberdiek/bookmark.sty"
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
@@ -2424,16 +2424,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (12.0pt too wide) in alignment at lines 190--196
+Overfull \hbox (12.0pt too wide) in alignment at lines 191--197
 []
  []
 
 
-Overfull \hbox (13.584pt too wide) in paragraph at lines 188--198
+Overfull \hbox (13.584pt too wide) in paragraph at lines 189--199
  [] 
  []
 
-Package tocbasic Info: character protrusion at toc deactivated on input line 200
+Package tocbasic Info: character protrusion at toc deactivated on input line 201
 .
 (./b7notes.toc
 Package cleveref Info: loaded `english' language definitions on input line 1.
@@ -2488,28 +2488,28 @@ LaTeX Font Info:    Font shape `TU/Alegreya-Bold.otf(0)/m/n' will be
 (Font)              scaled to size 7.84375pt on input line 69.
 LaTeX Font Info:    Font shape `TU/Alegreya-Bold.otf(0)/m/n' will be
 (Font)              scaled to size 5.88281pt on input line 69.
- [3<./general/tikz/tikzoutput/maps-output.pdf>] [4] [5] [6] [7] [8] [9])
-[10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
+ [3<./general/tikz/tikzoutput/maps-output.pdf>] [4] [5] [6] [7] [8] [9]
+[10]) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 215.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
  (./b7notes.aux
 Package cleveref Info: loaded `english' language definitions on input line 21.
  (./general/general.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 214.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 214.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 215.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
 Package rerunfilecheck Info: File `b7notes.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56375 strings out of 494291
+ 56379 strings out of 494291
  100000,1977958 words of node,token memory allocated
- 676 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 19 attribute, 74 glue_spec
-, 19 attribute_list, 5 write nodes
-   avail lists: 1:3,2:512,3:139,4:83,5:272,6:30,7:2521,8:46,9:179,10:15,11:129
- 58480 multiletter control sequences out of 65536+200000
- 153 fonts using 48360351 bytes
+ 680 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 20 attribute, 74 glue_spec
+, 20 attribute_list, 5 write nodes
+   avail lists: 1:3,2:510,3:139,4:83,5:273,6:30,7:2402,8:46,9:179,10:15,11:123
+ 58481 multiletter control sequences out of 65536+200000
+ 153 fonts using 48360271 bytes
  73i,9n,127p,9085b,2935s stack positions out of 5000i,500n,10000p,200000b,50000s
 <E:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/huerta/alegreya/alegreya-bold.
 otf><E:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/huerta/alegreya/alegreya-b
@@ -2522,9 +2522,9 @@ ublic/lm/lmmono12-regular.otf><E:/Program Files (x86)/MiKTeX 2.9/fonts/opentype/
 huerta/alegreya/alegreya-regular.otf><E:/Program Files (x86)/MiKTeX 2.9/fonts/op
 entype/huerta/alegreya/alegreya-italic.otf><E:/Program Files (x86)/MiKTeX 2.9/fo
 nts/opentype/huerta/alegreya/alegreya-bold.otf>
-Output written on b7notes.pdf (10 pages, 109815 bytes).
+Output written on b7notes.pdf (11 pages, 114153 bytes).
 
-PDF statistics: 257 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 131072)
+PDF statistics: 265 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 131072)
  64 words of extra memory for PDF output out of 10000 (max. 100000000)
 

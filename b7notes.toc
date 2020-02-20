@@ -4,5 +4,5 @@
 \contentsline {subsection}{\numberline {1.2}Groups}{3}{subsection.18}% 
 \contentsline {subsection}{\numberline {1.3}Group Homomorphisms}{5}{subsection.38}% 
 \contentsline {subsection}{\numberline {1.4}Vector Space}{7}{subsection.52}% 
-\contentsline {subsection}{\numberline {1.5}Some Important Abstract Groups}{9}{subsection.70}% 
-\contentsline {subsubsection}{\numberline {1.5.1}Linear Groups}{9}{subsubsection.71}% 
+\contentsline {subsection}{\numberline {1.5}Some Important Abstract Groups}{9}{subsection.72}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Linear Groups}{10}{subsubsection.73}% 
