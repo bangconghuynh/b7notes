@@ -190,7 +190,7 @@
 		\begin{example}\leavevmode
 			\label{exp:homomorphism}
 			\begin{enumerate}[label=(\alph*)]
-				\item The map $\varphi: G \rightarrow H$ defined by $\varphi: g \mapsto e_H$ is a group homomorphism.
+				\item \label{exp:homomorphism.trivial} The map $\varphi: G \rightarrow H$ defined by $\varphi: g \mapsto e_H$ is a group homomorphism.
 				It is, however, not injective if $|G| > 1$ because different elements in $G$ get mapped to the same element $e_H$ in $H$.
 				\item \label{exp:homomorphism.exp} Let $G = (\symbb{R}, +, 0)$ be the additive group of real numbers and $H = (\symbb{R}^+, \times, 1)$ the multiplicative group of positive real numbers.
 				The map $\varphi: G \rightarrow H$ defined by $\varphi: g \mapsto \exp(g)$ is a group homomorphism.
@@ -219,7 +219,26 @@
 			\end{enumerate}
 		\end{example}
 	
+		\begin{definition}[Kernel]
+			\label{def:imker}
+			If $\varphi: G \rightarrow H$ is a group homomorphism, then the \emph{kernel} of $\varphi$, denoted by $\ker\varphi$, is the subset $\{g \in G : \varphi: g \mapsto e_H \}$.
+		\end{definition}
 	
+		\begin{example}
+			Consider the group homomorphisms defined in \cref{exp:homomorphism}.
+			In \labelcref{exp:homomorphism.trivial}, the kernel of $\varphi$ is the whole group $G$.
+			In \labelcref{exp:homomorphism.exp}, the kernel of $\varphi$ is the trivial set $\{0\}$.
+		\end{example}
+	
+		\begin{proposition}
+			If $\varphi: G \rightarrow H$ is a group homomorphism, then $\ker\varphi$ is a subgroup of $G$.
+		\end{proposition}
+	
+		\begin{proof}
+			f
+		\end{proof}
+
+
 	\subsection{Vector Space}
 	
 		For many groups, we often think about their elements as linear transformations acting on some particular set of functions.
@@ -312,21 +331,21 @@
 		\end{example}
 
 		In anticipation of what will be explained in {\color{red} on representation theory}, whenever we think about the representation of a certain symmetry operation as a matrix, this matrix always has to be written with respect to a certain basis spanning a particular vector space.
-		A basis is therefore crucial in the specification of any representation.
+		A basis is therefore crucial in the specification of any representation and in determining if two representations are identical or only equivalent.
 
 
 	\subsection{Some Important Abstract Groups}
 	
-		We can now get back to our discussion of group theory where we will provide a quick survey of some important abstract groups to which many of the commonly encountered concrete groups are isomorphic, and quite a few of which have far-reaching implications in quantum mechanics.
-		The abstractness of these groups admittedly does make them quite hard to be understood at first, but having at least a notion of them helps us think about the zoo of finite and infinite groups more systematically.
+		We can now provide a quick survey of some important abstract groups to which many of the commonly encountered concrete groups are isomorphic, and quite a few of which have far-reaching implications in quantum mechanics.
+		The abstractness of these groups does make them quite hard to be understood at first, but having at least a notion of them helps us think about the zoo of finite and infinite groups more systematically.
 		
-		\subsubsection{Linear Groups}
-			\label{sec:lineargroups}
+		\subsubsection{The General and Special Linear Groups}
+			\label{sec:generalspeciallineargroups}
 			
 			A lot of symmetry operations are actually linear maps acting on a certain vector space.
-			The set of all such maps turns out to form a very large group which we will soon defined to be the \emph{general linear group}.
-			We first introduce this group in its most abstract sense, and then relate it to more concrete groups of matrices via group isomorphisms.
-			Furthermore, this group plays a crucial role in the formalism of representation theory, and having at least a brief acknowledgement of its existence does help clarify quite a lot of ideas in the representations of groups which we will explore later on.
+			The set of all such maps turns out to form an infinite group called the \emph{general linear group}.
+			We first introduce this group in its most abstract sense and then relate it to more concrete groups of square matrices via group isomorphisms.
+			This group plays a crucial role in the formalism of representation theory, and having at least a brief acknowledgement of its existence does help clarify quite a lot of ideas in the representations of groups which we will explore later on.
 			
 			\begin{proposition}
 				Let $V$ be a vector space over a field $\symbb{F}$.
@@ -351,7 +370,7 @@
 			\end{remark}
 		
 			\Cref{def:GL} does seem to make $\symup{GL}(V)$ look like a very abstract group.
-			It is indeed a very abstract group, and it might therefore be easier to think about $V$ as the space of geometric vectors that we are familiar with, and $\symup{GL}(V)$ as the group of all invertible linear transformations mapping each vector to another vector in $V$.
+			It is indeed a very abstract group, and it might be easier to think about $V$ as the space of geometric vectors that we are familiar with, and $\symup{GL}(V)$ as the group of all invertible linear transformations mapping each vector to another vector in $V$.
 			
 			Now, if $V$ is a vector space of $n$ dimensions over $\symbb{F}$, then we can choose a basis $\left\lbrace \symbf{e}_1, \symbf{e}_2, \ldots, \symbf{e}_n \right\rbrace$ for $V$ over $\symbb{F}$.
 			Then, every invertible linear transformation $\theta \in \symup{GL}(V)$ corresponds to an $n \times n$ invertible matrix $\symbfit{M}_{\theta} = [M_{ij}(\theta)]$ given by
@@ -375,14 +394,11 @@
 		
 			\begin{proof}
 				This proof is left as another (slightly more involved) exercise to the reader.
-				In essence, we need to show that $\theta: \symup{GL}(V) \rightarrow \symup{GL}_n(\symbb{F})$ is a group homomorphism, and then that $\theta$ is bijective.
+				In essence, one needs to show that $\theta: \symup{GL}(V) \rightarrow \symup{GL}_n(\symbb{F})$ is a group homomorphism, and then that $\theta$ is bijective.
 			\end{proof}
 		
-			It is important to remember that $\symup{GL}(V)$ is defined as an abstract group of linear maps acting on some vector space, whereas $\symup{GL}_n(\symbb{F})$ is a concrete group of matrices.
+			It is important to remember that $\symup{GL}(V)$ is an abstract group of linear maps acting on some vector space, whereas $\symup{GL}_n(\symbb{F})$ is a concrete group of matrices.
 			However, the isomorphism between the two enables us to think about one via the other.
 			We will have a lot more to say about these groups when we introduce representation theory.
 
-			
-
-%		\subsubsection{Linear Groups}
-%			\label{sec:lineargroups}
+		\subsubsection{The Orthogonal and Special Orthogonal Groups}

@@ -3,6 +3,7 @@
 \contentsline {subsection}{\numberline {1.1}Maps}{2}{subsection.3}% 
 \contentsline {subsection}{\numberline {1.2}Groups}{3}{subsection.18}% 
 \contentsline {subsection}{\numberline {1.3}Group Homomorphisms}{5}{subsection.38}% 
-\contentsline {subsection}{\numberline {1.4}Vector Space}{7}{subsection.52}% 
-\contentsline {subsection}{\numberline {1.5}Some Important Abstract Groups}{9}{subsection.72}% 
-\contentsline {subsubsection}{\numberline {1.5.1}Linear Groups}{10}{subsubsection.73}% 
+\contentsline {subsection}{\numberline {1.4}Vector Space}{7}{subsection.55}% 
+\contentsline {subsection}{\numberline {1.5}Some Important Abstract Groups}{10}{subsection.75}% 
+\contentsline {subsubsection}{\numberline {1.5.1}The General and Special Linear Groups}{10}{subsubsection.76}% 
+\contentsline {subsubsection}{\numberline {1.5.2}The Orthogonal and Special Orthogonal Groups}{11}{subsubsection.83}% 
